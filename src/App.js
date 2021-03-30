@@ -1,13 +1,25 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import Layout from './components/Layout/Layout';
+import LoginForm from './components/auth/LoginForm';
+import ConfirmForm from './components/auth/ConfirmForm'
+import PrivateRoute from './components/route/PrivateRoute'
 
 function App() {
   return (
     <Router>
-      <Layout>
-        <h1>Hello World</h1>
-      </Layout>
+      <Switch>
+        <Layout>
+          <PrivateRoute path='/'></PrivateRoute>
+          <Route path="/login">
+            <LoginForm />
+          </Route>
+          <Route path="/confirm">
+            <ConfirmForm/>
+          </Route>
+        </Layout>
+      </Switch>
     </Router>
   );
 }
