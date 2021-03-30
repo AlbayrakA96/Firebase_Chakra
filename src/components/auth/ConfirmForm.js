@@ -52,7 +52,7 @@ const ConfirmForm = () => {
       )}
       <form onSubmit={handleSubmit(onSubmit)}>
         <FormControl>
-          <FormLabel htmlfor="email">Email</FormLabel>
+          <FormLabel htmlFor="email">Email</FormLabel>
           <Input name="email" placeholder="Email" ref={register()} />
           <Button
             mt={4}

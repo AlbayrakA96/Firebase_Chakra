@@ -17,6 +17,11 @@ const Nav = () => {
                 Dashboard
               </Text>
             </Link>
+            <Box as="button" onClick={'/'}>
+              <Text fontSize="md" mr={8}>
+                Projecten
+              </Text>
+            </Box>
             <Box as="button" onClick={logout}>
               <Text fontSize="md" mr={8}>
                 Logout
